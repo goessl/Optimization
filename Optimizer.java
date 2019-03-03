@@ -65,23 +65,24 @@ public abstract class Optimizer<T> {
   /**
    * Returns if the optimization process should continue.
    * 
-   * @param obj object to optimize
+   * @param optimizable object to optimize
    * @param iteration current iteration
    * @param cost current cost
    * @return if the optimization process should continue
    */
-  public abstract boolean keepTraining(Optimizable<T> obj,
+  public abstract boolean keepTraining(Optimizable<T> optimizable,
           int iteration, double cost);
   
   /**
    * Optional method that gets called every iteration to output intermediate
    * results.
    * 
-   * @param obj object to optimize
+   * @param optimizable object to optimize
    * @param iteration current iteration
    * @param cost current cost
    */
-  public void publish(Optimizable<T> obj, int iteration, double cost) {}
+  public void publish(Optimizable<T> optimizable, int iteration, double cost)
+  {}
   
   
   
